@@ -29,18 +29,12 @@ float Weight::fromKilogramToPound( const float kilogram ) noexcept {
 return kilogram / KILOS_IN_A_POUND ;
 }
 
-static float convertWeight( float fromWeight, UnitOfWeight fromUnit,UnitOfWeight toUnit ) noexcept;
+static float convertWeight( float fromWeight, Weight::UnitOfWeight fromUnit,Weight::UnitOfWeight toUnit ) noexcept;
 
 void setMaxWeight(float newMaxWeight){
 
 }
 
-bool Weight::isWeightValid(float checkWeight)  noexcept{
-    if ((checkWeight > 0) && (checkWeight < maxWeight)){
-        return true;
-    }
-    return false;
-}
 
 Weight::Weight( const UnitOfWeight newUnitOfWeight, const float newMaxWeight ) : Weight( newUnitOfWeight ) {
     setMaxWeight( newMaxWeight );
@@ -58,6 +52,14 @@ if(Weight::isWeightValid(newWeight)){
 
 bool Weight::isWeightKnown() const noexcept {
     return bIsKnown;
+}
+
+bool Weight::isWeightValid(float checkWeight, float maxWeight) noexcept {
+
+        if ((checkWeight > 0) && (checkWeight < maxWeight)) {
+            return true;
+        }
+    return false;
 }
 
 bool Weight::operator==(const Weight &rhs_Weight) const {
