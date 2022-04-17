@@ -54,12 +54,16 @@ bool Weight::isWeightKnown() const noexcept {
     return bIsKnown;
 }
 
-bool Weight::isWeightValid(float checkWeight, float maxWeight) noexcept {
+bool Weight::validate() const noexcept {
+    return false;
+}
+
+static bool Weight::isWeightValid(float checkWeight, float maxWeight) noexcept {
 
         if ((checkWeight > 0) && (checkWeight < maxWeight)) {
             return true;
         }
-    return false;
+   return false;
 }
 
 bool Weight::operator==(const Weight &rhs_Weight) const {

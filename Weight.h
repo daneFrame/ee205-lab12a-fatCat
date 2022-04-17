@@ -47,7 +47,7 @@ public:
 public:
     Weight() noexcept;
 
-    bool isWeightValid(float checkWeight, float maxWeight) noexcept;
+    //bool isWeightValid(float checkWeight, float maxWeight) noexcept;
 
     Weight(float newWeight) ;
 
@@ -64,8 +64,9 @@ public:
 public:
     static float convertWeight();
     bool isWeightKnown() const noexcept;
+bool validate () const noexcept;
 
-    bool isWeightValid(float checkWeight);
+    bool isWeightValid(float checkWeight, float maxWeight);
 };
 
 
