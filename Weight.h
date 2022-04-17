@@ -13,9 +13,9 @@
 
 using namespace std;
 
-float kilogram;
+//
 
-enum unitOfWeight { POUND, KILO, SLUG };
+//enum unitOfWeight { POUND, KILO, SLUG };
 
 static float fromKilogramToPound( float kilogram ) noexcept;
 
@@ -23,7 +23,17 @@ static float fromKilogramToPound( float kilogram ) noexcept;
 class Weight {
 public:  ////////////// Enumerations //////////////
     /// A unit of measure for weight
-    static float fromKilogramToPound( float kilogram ) noexcept;
+    float kilogram;
+
+    static float fromKilogramToPound(float kilogram) noexcept;
+
+    enum UnitOfWeight {
+        POUND, KILO, SLUG
+    };
+
+//private:
+    //  bool bIsKnown;
+    //bool bHasMax;
 
 public:
     float weightInPounds;
@@ -32,32 +42,34 @@ public:
     bool bIsKnown;
     bool bHasMax;
     float maxWeight;
+    float weight;
 
 public:
-    Weight();
-    bool isWeightValid(float checkWeight, float maxWeight)  noexcept{
-        if ((checkWeight > 0) && (checkWeight < maxWeight)){
+    Weight() noexcept;
+
+    bool isWeightValid(float checkWeight, float maxWeight) noexcept {
+        if ((checkWeight > 0) && (checkWeight < maxWeight)) {
             return true;
         }
         return false;
     }
-    Weight(float newWeight);
-    Weight(unitOfWeight newUnitOfMeasure);
-    Weight(float newWeight, unitOfWeight newUnitOfMeasure);
+
+    Weight(float newWeight) ;
+
+    Weight(UnitOfWeight newUnitOfMeasure) noexcept;
+
+    Weight(float newWeight, UnitOfWeight newUnitOfMeasure);
+
     Weight(float newWeight, float newMaxWeight);
-    Weight(unitOfWeight newUnitOfMeasure, float newMaxWeight);
-    Weight(float newWeight, unitOfWeight newUnitOfMeasure, float newMaxWeight);
 
-}
-bool Weight::operator==( const Weight& rhs_Weight ) const {
-    /// Remember to convert the two weight's units into a common unit!
-    /// Treat unknown weights as 0 (so we can sort them without dealing
-    /// with exceptions)
-    float lhs_weight = (bIsKnown) ? getWeight(Weight::POUND) : 0;
-    float rhs_weight = (rhs_Weight.bIsKnown) ?
-                       rhs_Weight.getWeight(Weight::POUND) : 0;
+    Weight(UnitOfWeight  newUnitOfMeasure, float newMaxWeight);
 
-    return lhs_weight == rhs_weight;
+    Weight(float newWeight, UnitOfWeight newUnitOfMeasure, float newMaxWeight);
+
+public:
+    static float convertWeight();
+    bool isWeightKnown() const noexcept;
+
 };
 
-static float convertWeight();
+

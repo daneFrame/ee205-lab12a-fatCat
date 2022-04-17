@@ -17,6 +17,7 @@
 
 using namespace std;
 
+static const float UNKNOWN_WEIGHT = 0;
 static const float KILOS_IN_A_POUND = .453592;
 static const float SLUGS_IN_A_POUND = .031081;
 
@@ -28,7 +29,7 @@ float Weight::fromKilogramToPound( const float kilogram ) noexcept {
 return kilogram / KILOS_IN_A_POUND ;
 }
 
-static float convertWeight( float fromWeight,unitOfWeight fromUnit,unitOfWeight toUnit ) noexcept;
+static float convertWeight( float fromWeight, UnitOfWeight fromUnit,UnitOfWeight toUnit ) noexcept;
 
 void setMaxWeight(float newMaxWeight){
 
@@ -41,7 +42,7 @@ bool Weight::isWeightValid(float checkWeight)  noexcept{
     return false;
 }
 
-Weight::Weight( const unitOfWeight newUnitOfWeight, const float newMaxWeight ) : Weight( newUnitOfWeight ) {
+Weight::Weight( const UnitOfWeight newUnitOfWeight, const float newMaxWeight ) : Weight( newUnitOfWeight ) {
     setMaxWeight( newMaxWeight );
     assert( validate() );
 }
@@ -54,9 +55,20 @@ if(Weight::isWeightValid(newWeight)){
     cout << "ERROR: Invalid Weight." << endl;
 }
 }
+
+bool Weight::isWeightKnown() const noexcept {
+    return bIsKnown;
+}
+
+bool Weight::operator==(const Weight &rhs_Weight) const {
+    float lhs_weight = (bIsKnown) ? getWeight(Weight::POUND) : 0;
+    float rhs_weight = (rhs_Weight.bIsKnown) ?
+                       rhs_Weight.getWeight(Weight::POUND) : 0;
+
+    return lhs_weight == rhs_weight;
 ///////////////////////////////////////////////////////
 ////setters
-Weight::Weight(unitOfWeight newUnitOfMeasure) {
+Weight::Weight(UnitOfWeight newUnitOfMeasure) {
 
 }
 

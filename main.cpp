@@ -13,3 +13,7 @@
 
 using namespace std;
 
+int main(){
+        Weight weight =  Weight(6.9);
+return 0;
+};
