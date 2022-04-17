@@ -8,11 +8,17 @@
 /// @author Dane Sears <dsears@hawaii.edu>
 /// @date   16_APR_2022
 ///////////////////////////////////////////////////////////////////////////////
+#include <string>
+#include <ostream>
 
+using namespace std;
 
 float kilogram;
 
 enum unitOfWeight { POUND, KILO, SLUG };
+
+static float fromKilogramToPound( float kilogram ) noexcept;
+
 
 class Weight {
 public:  ////////////// Enumerations //////////////
@@ -29,6 +35,12 @@ public:
 
 public:
     Weight();
+    bool isWeightValid(float checkWeight, float maxWeight)  noexcept{
+        if ((checkWeight > 0) && (checkWeight < maxWeight)){
+            return true;
+        }
+        return false;
+    }
     Weight(float newWeight);
     Weight(unitOfWeight newUnitOfMeasure);
     Weight(float newWeight, unitOfWeight newUnitOfMeasure);
