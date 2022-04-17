@@ -34,7 +34,7 @@ void setMaxWeight(float newMaxWeight){
 
 }
 
-Weight::isWeightValid(float checkWeight)  noexcept{
+bool Weight::isWeightValid(float checkWeight)  noexcept{
     if ((checkWeight > 0) && (checkWeight < maxWeight)){
         return true;
     }
