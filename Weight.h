@@ -48,6 +48,16 @@ public:
     Weight(unitOfWeight newUnitOfMeasure, float newMaxWeight);
     Weight(float newWeight, unitOfWeight newUnitOfMeasure, float newMaxWeight);
 
+}
+bool Weight::operator==( const Weight& rhs_Weight ) const {
+    /// Remember to convert the two weight's units into a common unit!
+    /// Treat unknown weights as 0 (so we can sort them without dealing
+    /// with exceptions)
+    float lhs_weight = (bIsKnown) ? getWeight(Weight::POUND) : 0;
+    float rhs_weight = (rhs_Weight.bIsKnown) ?
+                       rhs_Weight.getWeight(Weight::POUND) : 0;
+
+    return lhs_weight == rhs_weight;
 };
 
 static float convertWeight();
