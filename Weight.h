@@ -8,13 +8,34 @@
 /// @author Dane Sears <dsears@hawaii.edu>
 /// @date   16_APR_2022
 ///////////////////////////////////////////////////////////////////////////////
-#ifndef EE205_LAB12A_FATCAT_WEIGHT_H
-#define EE205_LAB12A_FATCAT_WEIGHT_H
 
+
+float kilogram;
+
+enum unitOfWeight { POUND, KILO, SLUG };
 
 class Weight {
+public:  ////////////// Enumerations //////////////
+    /// A unit of measure for weight
+    static float fromKilogramToPound( float kilogram ) noexcept;
+
+public:
+    float weightInPounds;
+    float weightInSlugs;
+    float weighInKilos;
+    bool bIsKnown;
+    bool bHasMax;
+    float maxWeight;
+
+public:
+    Weight();
+    Weight(float newWeight);
+    Weight(unitOfWeight newUnitOfMeasure);
+    Weight(float newWeight, unitOfWeight newUnitOfMeasure);
+    Weight(float newWeight, float newMaxWeight);
+    Weight(unitOfWeight newUnitOfMeasure, float newMaxWeight);
+    Weight(float newWeight, unitOfWeight newUnitOfMeasure, float newMaxWeight);
 
 };
 
-
-#endif //EE205_LAB12A_FATCAT_WEIGHT_H
+static float convertWeight();
