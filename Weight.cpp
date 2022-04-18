@@ -56,7 +56,11 @@ bool Weight::validate() const noexcept {
     return false;
 }
 
-  bool Weight::isWeightValid(float checkWeight, float maxWeight) noexcept {
+int Weight::getWeight(Weight::UnitOfWeight weight) const {
+    return 0;
+}
+
+bool Weight::isWeightValid(float checkWeight, float maxWeight) const noexcept {
 
         if ((checkWeight > 0) && (checkWeight < maxWeight)) {
             return true;
@@ -70,38 +74,37 @@ bool Weight::operator==(const Weight &rhs_Weight) const {
                        rhs_Weight.getWeight(Weight::POUND) : 0;
 
     return lhs_weight == rhs_weight;
-///////////////////////////////////////////////////////
-////setters
-Weight::Weight(UnitOfWeight newUnitOfMeasure) {
-
 }
 
-Weight::Weight(float newWeight, unitOfWeight newUnitOfMeasure) {
-
-}
 
 Weight::Weight(float newWeight, float newMaxWeight) {
 
 }
 
-Weight::Weight(unitOfWeight newUnitOfMeasure, float newMaxWeight) {
-
-}
-
-Weight::Weight(float newWeight, unitOfWeight newUnitOfMeasure, float newMaxWeight) {
+Weight::Weight(float newWeight, UnitOfWeight newUnitOfMeasure, float newMaxWeight) {
 
 }
 
 ////getters
 float Weight::getWeight() const noexcept{
-    if(unitOfWeight == POUND) {
-        return weightInPounds;
-    }
-    if(unitOfWeight == KILO){
-        return weighInKilos;
-    }
-    if(unitOfWeight == SLUG){
-        return weightInSlugs;
-    }
+    //if(UnitOfWeight == POUND) {
+      //  return weightInPounds;
+    //}
+    //if(UnitOfWeight == KILO){
+      //  return weighInKilos;
+    //}
+    //if(UnitOfWeight == SLUG){
+    //    return weightInSlugs;
+    //}
+assert(isWeightValid(checkWeight));
+return checkWeight;
 }
+    Weight::Weight()
+    noexcept {
+
+    }
+    bool Weight::hasMaxWeight() const noexcept {
+
+        return bHasMax;
+    }
 ///////////////////////////////////////////////////////

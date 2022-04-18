@@ -47,27 +47,24 @@ public:
 
 public:
     Weight() noexcept;
-
-    //bool isWeightValid(float checkWeight, float maxWeight) noexcept;
-
     Weight(float newWeight) ;
-
     Weight(UnitOfWeight newUnitOfMeasure) noexcept;
-
     Weight(float newWeight, UnitOfWeight newUnitOfMeasure);
-
     Weight(float newWeight, float newMaxWeight);
-
     Weight(UnitOfWeight  newUnitOfMeasure, float newMaxWeight);
-
     Weight(float newWeight, UnitOfWeight newUnitOfMeasure, float newMaxWeight);
 
 public:
     static float convertWeight();
     bool isWeightKnown() const noexcept;
+    bool hasMaxWeight() const noexcept;
     bool validate () const noexcept;
-    //bool isWeightValid(float checkWeight, float maxWeight) const noexcept;
     bool isWeightValid(float checkWeight, float maxWeight) const noexcept;
+    float getWeight() const noexcept;
+    int getWeight(UnitOfWeight weight) const;
+    bool operator==(const Weight &rhs_Weight) const;
+
+    //bool isWeightValid(float checkWeight, float maxWeight);
 };
 
 
