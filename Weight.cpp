@@ -110,6 +110,11 @@ float Weight::getWeight(Weight::UnitOfWeight weightUnits) const noexcept{
     return convertedWeight;
 }
 
+float Weight::getMaxWeight() const noexcept {
+    assert( isWeightValid( maxWeight ));
+    return maxWeight;
+}
+
 ///bool Weight::isWeightValid(float checkWeight) const noexcept {
  /////  assert( (checkWeight > 0) || checkWeight == UNKNOWN_WEIGHT );
     ///if( bHasMax ){
