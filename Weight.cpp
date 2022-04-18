@@ -28,8 +28,18 @@ static const std::string SLUG_LABEL = "Slug";
 float Weight::fromKilogramToPound( const float kilogram ) noexcept {
 return kilogram / KILOS_IN_A_POUND ;
 }
+float Weight::fromPoundToKilogram(float pound) noexcept {
+    return pound * KILOS_IN_A_POUND;
+}
 
 ///static float convertWeight( float fromWeight, Weight::UnitOfWeight fromUnit,Weight::UnitOfWeight toUnit ) noexcept;
+float Weight::convertWeight(float fromWeight, Weight::UnitOfWeight fromUnit, Weight::UnitOfWeight toUnit) noexcept {
+switch(fromUnit){
+    case POUND:
+        return fromWeight;
+}
+
+}
 
 void setMaxWeight(float newMaxWeight){
 
@@ -108,3 +118,14 @@ return weight;
         return bHasMax;
     }
 ///////////////////////////////////////////////////////
+
+std::ostream& operator<<( ostream& lhs_stream
+        ,const Weight::UnitOfWeight rhs_UnitOfWeight ) {
+    switch( rhs_UnitOfWeight ) {
+        case Weight::POUND: return lhs_stream << POUND_LABEL ;
+        case Weight::KILO:  return lhs_stream << KILO_LABEL ;
+        case Weight::SLUG:  return lhs_stream << SLUG_LABEL ;
+        default:
+            throw out_of_range( "The unit can’t be mapped to a string" );
+    }
+}

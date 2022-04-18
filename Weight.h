@@ -24,10 +24,12 @@ static float fromKilogramToPound( float kilogram ) noexcept;
 class Weight {
 public:  ////////////// Enumerations //////////////
     /// A unit of measure for weight
-    float kilogram;
+   // static const std::string POUND_LABEL = "Pound" ;
+//static const std::string KILO_LABEL = "Kilo";
+//static const std::string SLUG_LABEL = "Slug";
 
     static float fromKilogramToPound(float kilogram) noexcept;
-
+static float fromPoundToKilogram(float pound) noexcept;
     enum UnitOfWeight {
         POUND, KILO, SLUG
     };
@@ -76,8 +78,9 @@ public:
 
 };
 
-float Weight::convertWeight(float fromWeight, Weight::UnitOfWeight fromUnit, Weight::UnitOfWeight toUnit) noexcept {
 
-}
+//float Weight::convertWeight(float fromWeight, Weight::UnitOfWeight fromUnit, Weight::UnitOfWeight toUnit) noexcept {
+
+//}
 
 
