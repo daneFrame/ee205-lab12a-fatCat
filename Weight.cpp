@@ -25,20 +25,58 @@ static const std::string POUND_LABEL = "Pound" ;
 static const std::string KILO_LABEL = "Kilo";
 static const std::string SLUG_LABEL = "Slug";
 
+
+float pound, slug;
+
+
 float Weight::fromKilogramToPound( const float kilogram ) noexcept {
 return kilogram / KILOS_IN_A_POUND ;
 }
-float Weight::fromPoundToKilogram(float pound) noexcept {
+
+float Weight::fromPoundToKilogram(const float pound) noexcept {
     return pound * KILOS_IN_A_POUND;
 }
 
+float Weight::fromSlugToPound(const float slug) noexcept {
+    return slug / SLUGS_IN_A_POUND;
+}
+
+float Weight::fromPoundToSlug(const float slug) noexcept {
+    return slug * SLUGS_IN_A_POUND;
+}
 ///static float convertWeight( float fromWeight, Weight::UnitOfWeight fromUnit,Weight::UnitOfWeight toUnit ) noexcept;
 float Weight::convertWeight(float fromWeight, Weight::UnitOfWeight fromUnit, Weight::UnitOfWeight toUnit) noexcept {
 switch(fromUnit){
     case POUND:
-        return fromWeight;
-}
+        switch (toUnit) {
+            case POUND:
+                return fromWeight;
+            case KILO:
+                return Weight::fromPoundToKilogram(fromWeight);
+            case SLUG:
+                return Weight::fromPoundToSlug(fromWeight);
+        }
+        case KILO:
+            switch (toUnit) {
+                case POUND:
+                    return fromKilogramToPound(fromWeight);
+                case KILO:
+                    return fromWeight;
+                case SLUG:
+                    return fromSlugToPound(fromKilogramToPound(fromWeight));
+            }
+                case SLUG:
+                    switch (toUnit){
+                        case POUND:
+                            return fromSlugToPound(fromWeight);
+                        case KILO:
+                            return fromPoundToKilogram(fromSlugToPound(fromWeight));
+                        case SLUG:
+                            return fromWeight;
+                    }
 
+}
+return 0;
 }
 
 void setMaxWeight(float newMaxWeight){
@@ -66,7 +104,7 @@ bool Weight::validate() const noexcept {
     return false;
 }
 
-float Weight::getWeight(Weight::UnitOfWeight weightUnits) const noexcept{
+float Weight::getWeight(Weight::UnitOfWeight weightUnits) noexcept{
     assert(isWeightValid(weightUnits));
     convertedWeight = convertWeight(weight, unitOfWeight, weightUnits);
     return weight;
@@ -86,15 +124,6 @@ bool Weight::isWeightValid(float checkWeight, float maxWeight) const noexcept {
         }
    return false;
 }
-
-bool Weight::operator==(const Weight &rhs_Weight) const {
-    float lhs_weight = (bIsKnown) ? getWeight(Weight::POUND) : 0;
-    float rhs_weight = (rhs_Weight.bIsKnown) ?
-                       rhs_Weight.getWeight(Weight::POUND) : 0;
-
-    return lhs_weight == rhs_weight;
-}
-
 
 Weight::Weight(float newWeight, float newMaxWeight) {
 
@@ -128,4 +157,10 @@ std::ostream& operator<<( ostream& lhs_stream
         default:
             throw out_of_range( "The unit can’t be mapped to a string" );
     }
+}
+
+bool Weight::operator==(const Weight &rhs_Weight) const {
+    float lhs_weight = bIsKnown ? getWeight(Weight::POUND) : 0;
+    float rhs_weight = (rhs_Weight.bIsKnown) ? rhs_Weight.getWeight(Weight::POUND) : 0;
+    return lhs_weight == rhs_weight;
 }

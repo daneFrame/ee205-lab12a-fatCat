@@ -13,14 +13,6 @@
 
 using namespace std;
 
-//
-
-//enum unitOfWeight { POUND, KILO, SLUG };
-
-static float fromKilogramToPound( float kilogram ) noexcept;
-
-
-
 class Weight {
 public:  ////////////// Enumerations //////////////
     /// A unit of measure for weight
@@ -29,7 +21,10 @@ public:  ////////////// Enumerations //////////////
 //static const std::string SLUG_LABEL = "Slug";
 
     static float fromKilogramToPound(float kilogram) noexcept;
-static float fromPoundToKilogram(float pound) noexcept;
+    static float fromPoundToKilogram(float pound) noexcept;
+    static float fromSlugToPound(float slug) noexcept;
+    static float fromPoundToSlug(float pound) noexcept;
+
     enum UnitOfWeight {
         POUND, KILO, SLUG
     };
@@ -67,7 +62,7 @@ public:
     bool validate () const noexcept;
     bool isWeightValid(float checkWeight, float maxWeight) const noexcept;
     float getWeight() const noexcept;
-    float getWeight(UnitOfWeight weightUnits) const noexcept;
+    float getWeight(UnitOfWeight weightUnits) noexcept;
     bool operator==(const Weight &rhs_Weight) const;
 
     //bool isWeightValid(float checkWeight, float maxWeight);
@@ -77,6 +72,7 @@ public:
     static float convertWeight( float fromWeight, Weight::UnitOfWeight fromUnit,Weight::UnitOfWeight toUnit ) noexcept;
 
 };
+
 
 
 //float Weight::convertWeight(float fromWeight, Weight::UnitOfWeight fromUnit, Weight::UnitOfWeight toUnit) noexcept {
