@@ -29,7 +29,7 @@ float Weight::fromKilogramToPound( const float kilogram ) noexcept {
 return kilogram / KILOS_IN_A_POUND ;
 }
 
-static float convertWeight( float fromWeight, Weight::UnitOfWeight fromUnit,Weight::UnitOfWeight toUnit ) noexcept;
+///static float convertWeight( float fromWeight, Weight::UnitOfWeight fromUnit,Weight::UnitOfWeight toUnit ) noexcept;
 
 void setMaxWeight(float newMaxWeight){
 
@@ -56,10 +56,19 @@ bool Weight::validate() const noexcept {
     return false;
 }
 
-int Weight::getWeight(Weight::UnitOfWeight weight) const {
-    return 0;
+float Weight::getWeight(Weight::UnitOfWeight weightUnits) const noexcept{
+    assert(isWeightValid(weightUnits));
+    convertedWeight = convertWeight(weight, unitOfWeight, weightUnits);
+    return weight;
 }
 
+///bool Weight::isWeightValid(float checkWeight) const noexcept {
+ /////  assert( (checkWeight > 0) || checkWeight == UNKNOWN_WEIGHT );
+    ///if( bHasMax ){
+   ////  assert( checkWeight <= maxWeight );
+    ///}
+    ///return true;
+///}
 bool Weight::isWeightValid(float checkWeight, float maxWeight) const noexcept {
 
         if ((checkWeight > 0) && (checkWeight < maxWeight)) {
@@ -87,17 +96,8 @@ Weight::Weight(float newWeight, UnitOfWeight newUnitOfMeasure, float newMaxWeigh
 
 ////getters
 float Weight::getWeight() const noexcept{
-    //if(UnitOfWeight == POUND) {
-      //  return weightInPounds;
-    //}
-    //if(UnitOfWeight == KILO){
-      //  return weighInKilos;
-    //}
-    //if(UnitOfWeight == SLUG){
-    //    return weightInSlugs;
-    //}
-assert(isWeightValid(checkWeight));
-return checkWeight;
+assert(isWeightValid(weight));
+return weight;
 }
     Weight::Weight()
     noexcept {
