@@ -43,11 +43,7 @@ Weight::Weight( const UnitOfWeight newUnitOfWeight, const float newMaxWeight ) :
 
 
 Weight::Weight(float newWeight) {
-if(Weight::isWeightValid(newWeight)){
-    weightInPounds = newWeight;
-}else{
-    cout << "ERROR: Invalid Weight." << endl;
-}
+
 }
 
 bool Weight::isWeightKnown() const noexcept {
@@ -55,10 +51,12 @@ bool Weight::isWeightKnown() const noexcept {
 }
 
 bool Weight::validate() const noexcept {
+    //float checkWeight;
+    assert(isWeightValid(checkWeight, maxWeight));
     return false;
 }
 
-static bool Weight::isWeightValid(float checkWeight, float maxWeight) noexcept {
+  bool Weight::isWeightValid(float checkWeight, float maxWeight) noexcept {
 
         if ((checkWeight > 0) && (checkWeight < maxWeight)) {
             return true;
