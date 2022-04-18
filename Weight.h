@@ -62,8 +62,10 @@ public:
     bool validate () const noexcept;
     bool isWeightValid(float checkWeight, float maxWeight) const noexcept;
     float getWeight() const noexcept;
-    float getWeight(UnitOfWeight weightUnits) noexcept;
+    float getWeight(UnitOfWeight weightUnits) const noexcept;
     bool operator==(const Weight &rhs_Weight) const;
+
+    void setMaxWeight(float newMaxWeight);
 
     //bool isWeightValid(float checkWeight, float maxWeight);
     bool isWeightValid(float checkWeight) const;
@@ -71,6 +73,7 @@ public:
 public:
     static float convertWeight( float fromWeight, Weight::UnitOfWeight fromUnit,Weight::UnitOfWeight toUnit ) noexcept;
 
+    ///float getWeight(UnitOfWeight weightUnits);
 };
 
 

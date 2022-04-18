@@ -104,10 +104,10 @@ bool Weight::validate() const noexcept {
     return false;
 }
 
-float Weight::getWeight(Weight::UnitOfWeight weightUnits) noexcept{
-    assert(isWeightValid(weightUnits));
-    convertedWeight = convertWeight(weight, unitOfWeight, weightUnits);
-    return weight;
+float Weight::getWeight(Weight::UnitOfWeight weightUnits) const noexcept{
+    assert(isWeightValid(weight));
+    float convertedWeight = convertWeight(weight, unitOfWeight, weightUnits);
+    return convertedWeight;
 }
 
 ///bool Weight::isWeightValid(float checkWeight) const noexcept {
@@ -160,6 +160,7 @@ std::ostream& operator<<( ostream& lhs_stream
 }
 
 bool Weight::operator==(const Weight &rhs_Weight) const {
+
     float lhs_weight = bIsKnown ? getWeight(Weight::POUND) : 0;
     float rhs_weight = (rhs_Weight.bIsKnown) ? rhs_Weight.getWeight(Weight::POUND) : 0;
     return lhs_weight == rhs_weight;
