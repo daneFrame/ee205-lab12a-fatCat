@@ -14,6 +14,10 @@
 using namespace std;
 
 int main(){
-       Weight weight =  Weight(6.9);
+    Weight firstWeight =  Weight(6.9);
+    firstWeight.dump();
+    Weight secondWeight = Weight(8.8, Weight::KILO, 12);
+    secondWeight.dump();
+    firstWeight.dump();
 return 0;
 };

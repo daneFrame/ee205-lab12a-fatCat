@@ -13,7 +13,7 @@
 
 using namespace std;
 
-float maxWeight;
+///float maxWeight;
 
 class Weight {
 public:  ////////////// Enumerations //////////////
@@ -62,11 +62,12 @@ public:
     bool isWeightKnown() const noexcept;
     bool hasMaxWeight() const noexcept;
     bool validate () const noexcept;
-    bool isWeightValid(float checkWeight, float maxWeight) const noexcept;
+    bool isWeightValid(float checkWeight) noexcept;
     float getWeight() const noexcept;
     float getWeight(UnitOfWeight weightUnits) const noexcept;
     float getMaxWeight() const noexcept;
     bool operator==(const Weight &rhs_Weight) const;
+    Weight & operator+=(float rhs_addToWeight);
 
     void setWeight(float newWeight);
     void setWeight(float newWeight, UnitOfWeight weightUnits);

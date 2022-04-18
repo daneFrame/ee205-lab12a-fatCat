@@ -44,6 +44,14 @@ float Weight::fromSlugToPound(const float slug) noexcept {
 float Weight::fromPoundToSlug(const float slug) noexcept {
     return slug * SLUGS_IN_A_POUND;
 }
+
+bool Weight::isWeightValid(float checkWeight) noexcept {
+
+    if ((checkWeight > 0) && (checkWeight < maxWeight)) {
+        return true;
+    }
+    return false;
+}
 ///static float convertWeight( float fromWeight, Weight::UnitOfWeight fromUnit,Weight::UnitOfWeight toUnit ) noexcept;
 float Weight::convertWeight(float fromWeight, Weight::UnitOfWeight fromUnit, Weight::UnitOfWeight toUnit) noexcept {
 switch(fromUnit){
@@ -86,10 +94,10 @@ Weight::Weight() noexcept {
     maxWeight = UNKNOWN_WEIGHT;
 }
 
-Weight::Weight( const UnitOfWeight newUnitOfWeight, const float newMaxWeight ) : Weight( newUnitOfWeight ) {
-    setMaxWeight( newMaxWeight );
-    assert( validate() );
-}
+///Weight::Weight( const UnitOfWeight newUnitOfWeight, const float newMaxWeight ) : Weight( newUnitOfWeight ) {
+  ///  setMaxWeight( newMaxWeight );
+   /// assert( validate() );
+///}
 
 Weight::Weight(float newWeight) {
     bIsKnown = false;
@@ -105,22 +113,22 @@ bool Weight::isWeightKnown() const noexcept {
 
 bool Weight::validate() const noexcept {
     //float checkWeight;
-    assert(isWeightValid(checkWeight, maxWeight));
-    return false;
+    assert(validate());
+    return true;
 }
 
 float Weight::getWeight(Weight::UnitOfWeight weightUnits) const noexcept{
     if(weight == 0){
         return UNKNOWN_WEIGHT;
     }
-    assert(isWeightValid(weight));
+    assert(validate());
     float convertedWeight = convertWeight(weight, unitOfWeight, weightUnits);
     return convertedWeight;
 }
 
 float Weight::getMaxWeight() const noexcept {
     ///if(!isWeightKnown())
-    if(isWeightValid( maxWeight )) {
+    if(validate()) {
         return maxWeight;
     }else{
         return UNKNOWN_WEIGHT;
@@ -138,13 +146,7 @@ maxWeight = newMaxWeight;
     ///}
     ///return true;
 ///}
-bool Weight::isWeightValid(float checkWeight, float maxWeight) const noexcept {
 
-        if ((checkWeight > 0) && (checkWeight < maxWeight)) {
-            return true;
-        }
-   return false;
-}
 
 Weight::Weight(float newWeight, float newMaxWeight) {
     bIsKnown = false;
@@ -165,7 +167,7 @@ Weight::Weight(float newWeight, UnitOfWeight newUnitOfWeight, float newMaxWeight
 
 ////getters
 float Weight::getWeight() const noexcept{
-assert(isWeightValid(weight));
+assert(validate());
 return weight;
 }
     bool Weight::hasMaxWeight() const noexcept {
@@ -190,6 +192,11 @@ bool Weight::operator==(const Weight &rhs_Weight) const {
     float lhs_weight = bIsKnown ? getWeight(Weight::POUND) : 0;
     float rhs_weight = (rhs_Weight.bIsKnown) ? rhs_Weight.getWeight(Weight::POUND) : 0;
     return lhs_weight == rhs_weight;
+}
+
+Weight &Weight::operator+=(float rhs_addToWeight) {
+    weight += rhs_addToWeight;
+    return *this;
 }
 
 void Weight::dump() const noexcept {
