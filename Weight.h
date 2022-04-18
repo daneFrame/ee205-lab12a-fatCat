@@ -13,6 +13,8 @@
 
 using namespace std;
 
+float maxWeight;
+
 class Weight {
 public:  ////////////// Enumerations //////////////
     /// A unit of measure for weight
@@ -66,8 +68,10 @@ public:
     float getMaxWeight() const noexcept;
     bool operator==(const Weight &rhs_Weight) const;
 
-
+    void setWeight(float newWeight);
+    void setWeight(float newWeight, UnitOfWeight weightUnits);
     void setMaxWeight(float newMaxWeight);
+    void dump() const noexcept;
 
     //bool isWeightValid(float checkWeight, float maxWeight);
     bool isWeightValid(float checkWeight) const;
@@ -77,6 +81,8 @@ public:
 
     ///float getWeight(UnitOfWeight weightUnits);
 };
+
+
 
 
 

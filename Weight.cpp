@@ -79,19 +79,24 @@ switch(fromUnit){
 return 0;
 }
 
-void setMaxWeight(float newMaxWeight){
-
+Weight::Weight() noexcept {
+    bIsKnown = false;
+    bHasMax = false;
+    unitOfWeight = POUND;
+    maxWeight = UNKNOWN_WEIGHT;
 }
-
 
 Weight::Weight( const UnitOfWeight newUnitOfWeight, const float newMaxWeight ) : Weight( newUnitOfWeight ) {
     setMaxWeight( newMaxWeight );
     assert( validate() );
 }
 
-
 Weight::Weight(float newWeight) {
-
+    bIsKnown = false;
+    bHasMax = false;
+    unitOfWeight = POUND;
+    weight = newWeight;
+    maxWeight = UNKNOWN_WEIGHT;
 }
 
 bool Weight::isWeightKnown() const noexcept {
@@ -105,14 +110,25 @@ bool Weight::validate() const noexcept {
 }
 
 float Weight::getWeight(Weight::UnitOfWeight weightUnits) const noexcept{
+    if(weight == 0){
+        return UNKNOWN_WEIGHT;
+    }
     assert(isWeightValid(weight));
     float convertedWeight = convertWeight(weight, unitOfWeight, weightUnits);
     return convertedWeight;
 }
 
 float Weight::getMaxWeight() const noexcept {
-    assert( isWeightValid( maxWeight ));
-    return maxWeight;
+    ///if(!isWeightKnown())
+    if(isWeightValid( maxWeight )) {
+        return maxWeight;
+    }else{
+        return UNKNOWN_WEIGHT;
+    }
+}
+
+void Weight::setMaxWeight(float newMaxWeight) {
+maxWeight = newMaxWeight;
 }
 
 ///bool Weight::isWeightValid(float checkWeight) const noexcept {
@@ -138,15 +154,12 @@ Weight::Weight(float newWeight, UnitOfWeight newUnitOfMeasure, float newMaxWeigh
 
 }
 
+
 ////getters
 float Weight::getWeight() const noexcept{
 assert(isWeightValid(weight));
 return weight;
 }
-    Weight::Weight()
-    noexcept {
-
-    }
     bool Weight::hasMaxWeight() const noexcept {
 
         return bHasMax;
@@ -169,4 +182,13 @@ bool Weight::operator==(const Weight &rhs_Weight) const {
     float lhs_weight = bIsKnown ? getWeight(Weight::POUND) : 0;
     float rhs_weight = (rhs_Weight.bIsKnown) ? rhs_Weight.getWeight(Weight::POUND) : 0;
     return lhs_weight == rhs_weight;
+}
+
+void Weight::dump() const noexcept {
+    cout << "==============================================" << endl;
+    cout << "bIsKnown: " << bIsKnown << endl;
+    cout << "bHasMax: " << bHasMax << endl;
+    cout << "Unit of Weight: " << unitOfWeight << endl;
+    cout << "Weight: " << weight << endl;
+    cout << "Max Weight: " << maxWeight << endl;
 }
