@@ -147,11 +147,19 @@ bool Weight::isWeightValid(float checkWeight, float maxWeight) const noexcept {
 }
 
 Weight::Weight(float newWeight, float newMaxWeight) {
-
+    bIsKnown = false;
+    bHasMax = false;
+    unitOfWeight = POUND;
+    weight = newWeight;
+    maxWeight = UNKNOWN_WEIGHT;
 }
 
-Weight::Weight(float newWeight, UnitOfWeight newUnitOfMeasure, float newMaxWeight) {
-
+Weight::Weight(float newWeight, UnitOfWeight newUnitOfWeight, float newMaxWeight) {
+    bIsKnown = true;
+    bHasMax = true;
+    unitOfWeight = newUnitOfWeight;
+    weight = newWeight;
+    maxWeight = newMaxWeight;
 }
 
 
