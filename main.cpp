@@ -14,6 +14,15 @@
 using namespace std;
 
 int main(){
+    ///assign a weight
+    Weight firstWeight =  Weight(6.9);
+
+    firstWeight.dump();
+
+    Weight secondWeight = Weight(8.8, Weight::KILO, 25);
+
+    secondWeight.dump();
+
 
 return 0;
 };
