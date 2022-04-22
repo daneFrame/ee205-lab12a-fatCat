@@ -1,4 +1,4 @@
-/usr/bin/cmake -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - Unix Makefiles" /tmp/tmp.zXoVYjcLBw
--- Configuring done
--- Generating done
--- Build files have been written to: /tmp/tmp.zXoVYjcLBw/cmake-build-release
+CMake executable not found: /usr/bin/cmake Configure Disable profile
+
+Cannot get compiler information:
+	Unable to create a temporary file
