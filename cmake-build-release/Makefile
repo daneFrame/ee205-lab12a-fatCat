@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /tmp/tmp.zXoVYjcLBw
+CMAKE_SOURCE_DIR = /tmp/tmp.tsubeNGjXd
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /tmp/tmp.zXoVYjcLBw/cmake-build-release
+CMAKE_BINARY_DIR = /tmp/tmp.tsubeNGjXd/cmake-build-release
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/tmp.zXoVYjcLBw/cmake-build-release/CMakeFiles /tmp/tmp.zXoVYjcLBw/cmake-build-release//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/tmp.tsubeNGjXd/cmake-build-release/CMakeFiles /tmp/tmp.tsubeNGjXd/cmake-build-release//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/tmp.zXoVYjcLBw/cmake-build-release/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/tmp.tsubeNGjXd/cmake-build-release/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named doxygen
+
+# Build rule for target.
+doxygen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 doxygen
+.PHONY : doxygen
+
+# fast build rule for target.
+doxygen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/build
+.PHONY : doxygen/fast
+
+#=============================================================================
 # Target rules for targets named ee205_lab12a_fatCat
 
 # Build rule for target.
@@ -129,53 +142,53 @@ ee205_lab12a_fatCat/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ee205_lab12a_fatCat.dir/build.make CMakeFiles/ee205_lab12a_fatCat.dir/build
 .PHONY : ee205_lab12a_fatCat/fast
 
-Weight.o: Weight.cpp.o
-.PHONY : Weight.o
+src/Weight.o: src/Weight.cpp.o
+.PHONY : src/Weight.o
 
 # target to build an object file
-Weight.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ee205_lab12a_fatCat.dir/build.make CMakeFiles/ee205_lab12a_fatCat.dir/Weight.cpp.o
-.PHONY : Weight.cpp.o
+src/Weight.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ee205_lab12a_fatCat.dir/build.make CMakeFiles/ee205_lab12a_fatCat.dir/src/Weight.cpp.o
+.PHONY : src/Weight.cpp.o
 
-Weight.i: Weight.cpp.i
-.PHONY : Weight.i
+src/Weight.i: src/Weight.cpp.i
+.PHONY : src/Weight.i
 
 # target to preprocess a source file
-Weight.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ee205_lab12a_fatCat.dir/build.make CMakeFiles/ee205_lab12a_fatCat.dir/Weight.cpp.i
-.PHONY : Weight.cpp.i
+src/Weight.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ee205_lab12a_fatCat.dir/build.make CMakeFiles/ee205_lab12a_fatCat.dir/src/Weight.cpp.i
+.PHONY : src/Weight.cpp.i
 
-Weight.s: Weight.cpp.s
-.PHONY : Weight.s
+src/Weight.s: src/Weight.cpp.s
+.PHONY : src/Weight.s
 
 # target to generate assembly for a file
-Weight.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ee205_lab12a_fatCat.dir/build.make CMakeFiles/ee205_lab12a_fatCat.dir/Weight.cpp.s
-.PHONY : Weight.cpp.s
+src/Weight.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ee205_lab12a_fatCat.dir/build.make CMakeFiles/ee205_lab12a_fatCat.dir/src/Weight.cpp.s
+.PHONY : src/Weight.cpp.s
 
-main.o: main.cpp.o
-.PHONY : main.o
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ee205_lab12a_fatCat.dir/build.make CMakeFiles/ee205_lab12a_fatCat.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ee205_lab12a_fatCat.dir/build.make CMakeFiles/ee205_lab12a_fatCat.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ee205_lab12a_fatCat.dir/build.make CMakeFiles/ee205_lab12a_fatCat.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ee205_lab12a_fatCat.dir/build.make CMakeFiles/ee205_lab12a_fatCat.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ee205_lab12a_fatCat.dir/build.make CMakeFiles/ee205_lab12a_fatCat.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ee205_lab12a_fatCat.dir/build.make CMakeFiles/ee205_lab12a_fatCat.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -185,13 +198,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... doxygen"
 	@echo "... ee205_lab12a_fatCat"
-	@echo "... Weight.o"
-	@echo "... Weight.i"
-	@echo "... Weight.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/Weight.o"
+	@echo "... src/Weight.i"
+	@echo "... src/Weight.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

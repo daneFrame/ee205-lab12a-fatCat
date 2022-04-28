@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /tmp/tmp.zXoVYjcLBw
+CMAKE_SOURCE_DIR = /tmp/tmp.tsubeNGjXd
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /tmp/tmp.zXoVYjcLBw/cmake-build-release
+CMAKE_BINARY_DIR = /tmp/tmp.tsubeNGjXd/cmake-build-release
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ee205_lab12a_fatCat.dir/depend.make
@@ -69,47 +69,47 @@ include CMakeFiles/ee205_lab12a_fatCat.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/ee205_lab12a_fatCat.dir/flags.make
 
-CMakeFiles/ee205_lab12a_fatCat.dir/main.cpp.o: CMakeFiles/ee205_lab12a_fatCat.dir/flags.make
-CMakeFiles/ee205_lab12a_fatCat.dir/main.cpp.o: ../main.cpp
-CMakeFiles/ee205_lab12a_fatCat.dir/main.cpp.o: CMakeFiles/ee205_lab12a_fatCat.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.zXoVYjcLBw/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ee205_lab12a_fatCat.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ee205_lab12a_fatCat.dir/main.cpp.o -MF CMakeFiles/ee205_lab12a_fatCat.dir/main.cpp.o.d -o CMakeFiles/ee205_lab12a_fatCat.dir/main.cpp.o -c /tmp/tmp.zXoVYjcLBw/main.cpp
+CMakeFiles/ee205_lab12a_fatCat.dir/src/main.cpp.o: CMakeFiles/ee205_lab12a_fatCat.dir/flags.make
+CMakeFiles/ee205_lab12a_fatCat.dir/src/main.cpp.o: ../src/main.cpp
+CMakeFiles/ee205_lab12a_fatCat.dir/src/main.cpp.o: CMakeFiles/ee205_lab12a_fatCat.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.tsubeNGjXd/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ee205_lab12a_fatCat.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ee205_lab12a_fatCat.dir/src/main.cpp.o -MF CMakeFiles/ee205_lab12a_fatCat.dir/src/main.cpp.o.d -o CMakeFiles/ee205_lab12a_fatCat.dir/src/main.cpp.o -c /tmp/tmp.tsubeNGjXd/src/main.cpp
 
-CMakeFiles/ee205_lab12a_fatCat.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ee205_lab12a_fatCat.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.zXoVYjcLBw/main.cpp > CMakeFiles/ee205_lab12a_fatCat.dir/main.cpp.i
+CMakeFiles/ee205_lab12a_fatCat.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ee205_lab12a_fatCat.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.tsubeNGjXd/src/main.cpp > CMakeFiles/ee205_lab12a_fatCat.dir/src/main.cpp.i
 
-CMakeFiles/ee205_lab12a_fatCat.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ee205_lab12a_fatCat.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.zXoVYjcLBw/main.cpp -o CMakeFiles/ee205_lab12a_fatCat.dir/main.cpp.s
+CMakeFiles/ee205_lab12a_fatCat.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ee205_lab12a_fatCat.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.tsubeNGjXd/src/main.cpp -o CMakeFiles/ee205_lab12a_fatCat.dir/src/main.cpp.s
 
-CMakeFiles/ee205_lab12a_fatCat.dir/Weight.cpp.o: CMakeFiles/ee205_lab12a_fatCat.dir/flags.make
-CMakeFiles/ee205_lab12a_fatCat.dir/Weight.cpp.o: ../Weight.cpp
-CMakeFiles/ee205_lab12a_fatCat.dir/Weight.cpp.o: CMakeFiles/ee205_lab12a_fatCat.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.zXoVYjcLBw/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ee205_lab12a_fatCat.dir/Weight.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ee205_lab12a_fatCat.dir/Weight.cpp.o -MF CMakeFiles/ee205_lab12a_fatCat.dir/Weight.cpp.o.d -o CMakeFiles/ee205_lab12a_fatCat.dir/Weight.cpp.o -c /tmp/tmp.zXoVYjcLBw/Weight.cpp
+CMakeFiles/ee205_lab12a_fatCat.dir/src/Weight.cpp.o: CMakeFiles/ee205_lab12a_fatCat.dir/flags.make
+CMakeFiles/ee205_lab12a_fatCat.dir/src/Weight.cpp.o: ../src/Weight.cpp
+CMakeFiles/ee205_lab12a_fatCat.dir/src/Weight.cpp.o: CMakeFiles/ee205_lab12a_fatCat.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.tsubeNGjXd/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ee205_lab12a_fatCat.dir/src/Weight.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ee205_lab12a_fatCat.dir/src/Weight.cpp.o -MF CMakeFiles/ee205_lab12a_fatCat.dir/src/Weight.cpp.o.d -o CMakeFiles/ee205_lab12a_fatCat.dir/src/Weight.cpp.o -c /tmp/tmp.tsubeNGjXd/src/Weight.cpp
 
-CMakeFiles/ee205_lab12a_fatCat.dir/Weight.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ee205_lab12a_fatCat.dir/Weight.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.zXoVYjcLBw/Weight.cpp > CMakeFiles/ee205_lab12a_fatCat.dir/Weight.cpp.i
+CMakeFiles/ee205_lab12a_fatCat.dir/src/Weight.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ee205_lab12a_fatCat.dir/src/Weight.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.tsubeNGjXd/src/Weight.cpp > CMakeFiles/ee205_lab12a_fatCat.dir/src/Weight.cpp.i
 
-CMakeFiles/ee205_lab12a_fatCat.dir/Weight.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ee205_lab12a_fatCat.dir/Weight.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.zXoVYjcLBw/Weight.cpp -o CMakeFiles/ee205_lab12a_fatCat.dir/Weight.cpp.s
+CMakeFiles/ee205_lab12a_fatCat.dir/src/Weight.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ee205_lab12a_fatCat.dir/src/Weight.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.tsubeNGjXd/src/Weight.cpp -o CMakeFiles/ee205_lab12a_fatCat.dir/src/Weight.cpp.s
 
 # Object files for target ee205_lab12a_fatCat
 ee205_lab12a_fatCat_OBJECTS = \
-"CMakeFiles/ee205_lab12a_fatCat.dir/main.cpp.o" \
-"CMakeFiles/ee205_lab12a_fatCat.dir/Weight.cpp.o"
+"CMakeFiles/ee205_lab12a_fatCat.dir/src/main.cpp.o" \
+"CMakeFiles/ee205_lab12a_fatCat.dir/src/Weight.cpp.o"
 
 # External object files for target ee205_lab12a_fatCat
 ee205_lab12a_fatCat_EXTERNAL_OBJECTS =
 
-ee205_lab12a_fatCat: CMakeFiles/ee205_lab12a_fatCat.dir/main.cpp.o
-ee205_lab12a_fatCat: CMakeFiles/ee205_lab12a_fatCat.dir/Weight.cpp.o
+ee205_lab12a_fatCat: CMakeFiles/ee205_lab12a_fatCat.dir/src/main.cpp.o
+ee205_lab12a_fatCat: CMakeFiles/ee205_lab12a_fatCat.dir/src/Weight.cpp.o
 ee205_lab12a_fatCat: CMakeFiles/ee205_lab12a_fatCat.dir/build.make
 ee205_lab12a_fatCat: CMakeFiles/ee205_lab12a_fatCat.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/tmp/tmp.zXoVYjcLBw/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ee205_lab12a_fatCat"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/tmp/tmp.tsubeNGjXd/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ee205_lab12a_fatCat"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ee205_lab12a_fatCat.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -121,6 +121,6 @@ CMakeFiles/ee205_lab12a_fatCat.dir/clean:
 .PHONY : CMakeFiles/ee205_lab12a_fatCat.dir/clean
 
 CMakeFiles/ee205_lab12a_fatCat.dir/depend:
-	cd /tmp/tmp.zXoVYjcLBw/cmake-build-release && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /tmp/tmp.zXoVYjcLBw /tmp/tmp.zXoVYjcLBw /tmp/tmp.zXoVYjcLBw/cmake-build-release /tmp/tmp.zXoVYjcLBw/cmake-build-release /tmp/tmp.zXoVYjcLBw/cmake-build-release/CMakeFiles/ee205_lab12a_fatCat.dir/DependInfo.cmake --color=$(COLOR)
+	cd /tmp/tmp.tsubeNGjXd/cmake-build-release && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /tmp/tmp.tsubeNGjXd /tmp/tmp.tsubeNGjXd /tmp/tmp.tsubeNGjXd/cmake-build-release /tmp/tmp.tsubeNGjXd/cmake-build-release /tmp/tmp.tsubeNGjXd/cmake-build-release/CMakeFiles/ee205_lab12a_fatCat.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ee205_lab12a_fatCat.dir/depend
 

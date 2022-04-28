@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/ee205_lab12a_fatCat.dir/Weight.cpp.o"
-  "CMakeFiles/ee205_lab12a_fatCat.dir/Weight.cpp.o.d"
-  "CMakeFiles/ee205_lab12a_fatCat.dir/main.cpp.o"
-  "CMakeFiles/ee205_lab12a_fatCat.dir/main.cpp.o.d"
+  "CMakeFiles/ee205_lab12a_fatCat.dir/src/Weight.cpp.o"
+  "CMakeFiles/ee205_lab12a_fatCat.dir/src/Weight.cpp.o.d"
+  "CMakeFiles/ee205_lab12a_fatCat.dir/src/main.cpp.o"
+  "CMakeFiles/ee205_lab12a_fatCat.dir/src/main.cpp.o.d"
   "ee205_lab12a_fatCat"
   "ee205_lab12a_fatCat.pdb"
 )

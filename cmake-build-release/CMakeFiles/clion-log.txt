@@ -1,4 +1,8 @@
-CMake executable not found: /usr/bin/cmake Configure Disable profile
-
-Cannot get compiler information:
-	Unable to create a temporary file
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - Unix Makefiles" /tmp/tmp.tsubeNGjXd
+-- CMAKE_SOURCE_DIR = [/tmp/tmp.tsubeNGjXd]
+-- Generating documentation using Doxygen
+-- DOXYGEN_OUTPUT_DIRECTORY = [/tmp/tmp.tsubeNGjXd/generated_docs]
+-- PROJECT_BINARY_DIR = [/tmp/tmp.tsubeNGjXd/cmake-build-release]
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /tmp/tmp.tsubeNGjXd/cmake-build-release

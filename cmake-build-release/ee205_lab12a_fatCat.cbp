@@ -5,21 +5,31 @@
 		<Option title="ee205_lab12a_fatCat"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake-build-release\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/tmp/tmp.zXoVYjcLBw/cmake-build-release"/>
+				<Option working_dir="/tmp/tmp.tsubeNGjXd/cmake-build-release"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.zXoVYjcLBw/cmake-build-release/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.zXoVYjcLBw/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.zXoVYjcLBw/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.zXoVYjcLBw/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.tsubeNGjXd/cmake-build-release/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.tsubeNGjXd/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.tsubeNGjXd/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.tsubeNGjXd/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="doxygen">
+				<Option working_dir="/tmp/tmp.tsubeNGjXd/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.tsubeNGjXd/cmake-build-release/Makefile&quot;  VERBOSE=1 doxygen"/>
+					<CompileFile command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.tsubeNGjXd/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.tsubeNGjXd/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.tsubeNGjXd/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ee205_lab12a_fatCat">
-				<Option output="/tmp/tmp.zXoVYjcLBw/cmake-build-release/ee205_lab12a_fatCat" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/tmp/tmp.zXoVYjcLBw/cmake-build-release"/>
+				<Option output="/tmp/tmp.tsubeNGjXd/cmake-build-release/ee205_lab12a_fatCat" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/tmp.tsubeNGjXd/cmake-build-release"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -32,15 +42,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.zXoVYjcLBw/cmake-build-release/Makefile&quot;  VERBOSE=1 ee205_lab12a_fatCat"/>
-					<CompileFile command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.zXoVYjcLBw/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.zXoVYjcLBw/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.zXoVYjcLBw/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.tsubeNGjXd/cmake-build-release/Makefile&quot;  VERBOSE=1 ee205_lab12a_fatCat"/>
+					<CompileFile command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.tsubeNGjXd/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.tsubeNGjXd/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.tsubeNGjXd/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ee205_lab12a_fatCat/fast">
-				<Option output="/tmp/tmp.zXoVYjcLBw/cmake-build-release/ee205_lab12a_fatCat" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/tmp/tmp.zXoVYjcLBw/cmake-build-release"/>
+				<Option output="/tmp/tmp.tsubeNGjXd/cmake-build-release/ee205_lab12a_fatCat" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/tmp.tsubeNGjXd/cmake-build-release"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -53,44 +63,56 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.zXoVYjcLBw/cmake-build-release/Makefile&quot;  VERBOSE=1 ee205_lab12a_fatCat/fast"/>
-					<CompileFile command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.zXoVYjcLBw/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.zXoVYjcLBw/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.zXoVYjcLBw/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.tsubeNGjXd/cmake-build-release/Makefile&quot;  VERBOSE=1 ee205_lab12a_fatCat/fast"/>
+					<CompileFile command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.tsubeNGjXd/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.tsubeNGjXd/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.tsubeNGjXd/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/tmp/tmp.zXoVYjcLBw/cmake-build-release"/>
+				<Option working_dir="/tmp/tmp.tsubeNGjXd/cmake-build-release"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.zXoVYjcLBw/cmake-build-release/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.zXoVYjcLBw/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.zXoVYjcLBw/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.zXoVYjcLBw/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.tsubeNGjXd/cmake-build-release/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.tsubeNGjXd/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.tsubeNGjXd/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.tsubeNGjXd/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/tmp/tmp.zXoVYjcLBw/cmake-build-release"/>
+				<Option working_dir="/tmp/tmp.tsubeNGjXd/cmake-build-release"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.zXoVYjcLBw/cmake-build-release/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.zXoVYjcLBw/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.zXoVYjcLBw/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.zXoVYjcLBw/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.tsubeNGjXd/cmake-build-release/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.tsubeNGjXd/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.tsubeNGjXd/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.tsubeNGjXd/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/tmp/tmp.zXoVYjcLBw/Weight.cpp">
+		<Unit filename="/tmp/tmp.tsubeNGjXd/CONTRIBUTE.md">
+			<Option target="doxygen"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.tsubeNGjXd/README.md">
+			<Option target="doxygen"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.tsubeNGjXd/src/Weight.cpp">
 			<Option target="ee205_lab12a_fatCat"/>
 		</Unit>
-		<Unit filename="/tmp/tmp.zXoVYjcLBw/Weight.h">
+		<Unit filename="/tmp/tmp.tsubeNGjXd/src/Weight.h">
 			<Option target="ee205_lab12a_fatCat"/>
 		</Unit>
-		<Unit filename="/tmp/tmp.zXoVYjcLBw/main.cpp">
+		<Unit filename="/tmp/tmp.tsubeNGjXd/src/main.cpp">
 			<Option target="ee205_lab12a_fatCat"/>
 		</Unit>
-		<Unit filename="/tmp/tmp.zXoVYjcLBw/CMakeLists.txt">
+		<Unit filename="/tmp/tmp.tsubeNGjXd/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.tsubeNGjXd/cmake-build-release/CMakeDoxyfile.in">
+			<Option virtualFolder="CMake Files\cmake-build-release\"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.tsubeNGjXd/cmake-build-release/CMakeDoxygenDefaults.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-release\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>
